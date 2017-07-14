@@ -1,0 +1,21 @@
+# (Docker) Swarm Cluster Module
+Creates a cluster of Docker Swarm Workers and Managers
+
+## Variables
+Variables that do not provide a default value are **required**.
+
+{% for var in variables %}
+###### {{ var["name"] }}
+{% if "type" in var %}
+- **type** : _{{ var["type"] }}_
+{% endif %}
+{% if "description" in var %}
+- **description** : _{{ var["description"] }}_
+{% endif %}
+{% if "default" in var %}
+- **default** : _{{ var["default"] }}_
+{% endif %}
+{% endfor %}
+
+## Outputs
+
